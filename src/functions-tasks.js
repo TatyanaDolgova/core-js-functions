@@ -18,7 +18,7 @@
  *
  */
 function getCurrentFunctionName() {
-  return arguments.callee.name
+  return getCurrentFunctionName.name;
 }
 
 /**
@@ -35,7 +35,7 @@ function getCurrentFunctionName() {
 function getFunctionBody(func) {
   if (typeof func !== 'function') {
     return '';
-  };
+  }
   return func.toString();
 }
 
@@ -54,9 +54,7 @@ function getFunctionBody(func) {
  *
  */
 function getArgumentsCount(funcs) {
-  return funcs.forEach(func => {
-    console.log(arguments)
-  })
+  return funcs.map((func) => func.length);
 }
 
 /**
